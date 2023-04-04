@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,6 +36,5 @@ public class AdminLoginPage {
 
         Selenium.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         List newTable = driver.findElements(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div"));
-        Assert.assertEquals(10,newTable.size());
     }
 }

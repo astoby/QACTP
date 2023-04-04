@@ -7,7 +7,8 @@ import pages.AdminTemplatePage;
 import java.util.concurrent.TimeUnit;
 
 public class CTPAdmin {
-    private static String urlAdmin = "https://axis.inx.devops.эффективность.рф/admin/login";
+    private static final String  urlAdmin = "https://axis.inx.devops.эффективность.рф/admin/login";
+
 
     public static void loginAdmin() {
         Selenium.driver.get(urlAdmin);
@@ -22,9 +23,14 @@ public class CTPAdmin {
         templatePage.checkTable();
     }
 
-    public static void attributeChecks(){
+    public static void attributeChecks() throws InterruptedException {
         AdminAttributePage attributePage = new AdminAttributePage(Selenium.driver);
-        attributePage.AdminAttributePageAddAttribute(Selenium.driver);
+        attributePage.AdminAttributePageAdd(Selenium.driver);
+    }
+
+    public static void templateAdd(){
+        AdminTemplatePage templatePage = new AdminTemplatePage(Selenium.driver);
+        templatePage.AdminTemplateAdd(Selenium.driver);
     }
 
 }

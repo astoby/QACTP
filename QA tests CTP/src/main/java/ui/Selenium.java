@@ -9,7 +9,7 @@ public class Selenium {
     public static WebDriver driver;
     public static void setup()  {
         //определение пути до драйвера и его настройка
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriverMac.exe");
         //создание экземпляра драйвера
         driver = new ChromeDriver();
         //окно разворачивается на полный экран

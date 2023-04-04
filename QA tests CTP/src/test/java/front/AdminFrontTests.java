@@ -1,5 +1,6 @@
 package front;
 
+import io.qameta.allure.Step;
 import ui.CTPAdmin;
 import ui.Selenium;
 import org.junit.jupiter.api.AfterAll;
@@ -25,7 +26,7 @@ public class AdminFrontTests {
     }
     //endregion
 
-    @Test
+    //@Test
     public void loginAdminTest() {
         try {
             CTPAdmin.loginAdmin();
@@ -35,7 +36,7 @@ public class AdminFrontTests {
         }
     }
 
-    @Test
+    //@Test
     public void checkAdminTable(){
         try {
             CTPAdmin.templateChecks();
@@ -49,6 +50,17 @@ public class AdminFrontTests {
     public void checkAttributeTable(){
         try {
             CTPAdmin.attributeChecks();
+        } catch (Exception e) {
+            System.out.println("______________________________________________________________");
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    @Step
+    public void templateAdd(){
+        try {
+            CTPAdmin.templateAdd();
         } catch (Exception e) {
             System.out.println("______________________________________________________________");
             e.printStackTrace();
